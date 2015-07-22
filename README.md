@@ -1,5 +1,7 @@
 ## css flexbox demo by react.js
 
+[Demo page](http://shouda.github.io/demo/react-flex-dice/)
+
 #### dev tools
 
 * [React](https://facebook.github.io/react/)
