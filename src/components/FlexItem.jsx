@@ -26,6 +26,9 @@ const diceSizePadding = {
 };
 
 class FlexItem extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     const items = arrayRange(1, this.props.items);
     const itemStyle = (this.props.items === 4 | this.props.items === 6) ? diceSizePadding : diceSize;
@@ -37,9 +40,6 @@ class FlexItem extends React.Component {
         })}
       </div>
     );
-  }
-  constructor(props) {
-    super(props);
   }
 }
 

@@ -1,6 +1,9 @@
 import React from 'react';
 
 class FlexSetting extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <div className="m1 flex flex-column">
@@ -121,9 +124,6 @@ class FlexSetting extends React.Component {
   }
   handleStyle(e) {
     this.props.onStyleChange(e.currentTarget.name, e.currentTarget.value);
-  }
-  constructor(props) {
-    super(props);
   }
 }
 

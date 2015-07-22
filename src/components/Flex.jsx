@@ -56,6 +56,25 @@ const origCssValue = {
 };
 
 class Flex extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      direction: {},
+      wrap: {'flex-nowrap': true},
+      justify: {'flex-jcenter': true},
+      alignItems: {'flex-center': true},
+      alignContent: {'flex-aastretch': true},
+      alignSelf: ['flex-sauto', 'flex-sauto', 'flex-sauto', 'flex-sauto', 'flex-sauto', 'flex-sauto'],
+      cssValue: {
+        direction: 'row',
+        wrap: 'nowrap',
+        justify: 'center',
+        alignItems: 'center',
+        alignContent: 'stretch',
+      },
+      items: 1,
+    };
+  }
   render() {
     const flexbox = cx(styleFlexbox, this.state.direction, this.state.wrap, this.state.justify, this.state.alignItems, this.state.alignContent);
     return (
@@ -212,25 +231,6 @@ class Flex extends React.Component {
     cssValue[key] = origCssValue[key][style];
     this.setState({cssValue: cssValue});
     this.setState({[key]: {[style]: true}});
-  }
-  constructor() {
-    super();
-    this.state = {
-      direction: {},
-      wrap: {'flex-nowrap': true},
-      justify: {'flex-jcenter': true},
-      alignItems: {'flex-center': true},
-      alignContent: {'flex-aastretch': true},
-      alignSelf: ['flex-sauto', 'flex-sauto', 'flex-sauto', 'flex-sauto', 'flex-sauto', 'flex-sauto'],
-      cssValue: {
-        direction: 'row',
-        wrap: 'nowrap',
-        justify: 'center',
-        alignItems: 'center',
-        alignContent: 'stretch',
-      },
-      items: 1,
-    };
   }
 }
 

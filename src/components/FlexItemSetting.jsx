@@ -14,6 +14,9 @@ const diceNumber = [
 ];
 
 class FlexItemSetting extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     const items = arrayRange(1, this.props.items);
     return (
@@ -77,9 +80,6 @@ class FlexItemSetting extends React.Component {
     const style = this.props.alignSelf;
     style[parseInt(e.currentTarget.name, 10) - 1] = e.currentTarget.value;
     this.props.onSelfChange(style);
-  }
-  constructor(props) {
-    super(props);
   }
 }
 

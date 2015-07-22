@@ -1,6 +1,9 @@
 import React from 'react';
 
 class Dummy extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <div>
@@ -12,9 +15,6 @@ class Dummy extends React.Component {
   }
   handleClick() {
     this.props.onElementClick();
-  }
-  constructor(props) {
-    super(props);
   }
 }
 
