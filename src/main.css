@@ -70,9 +70,9 @@
 @custom-media --breakpoint-lg (min-width: 64em);
 */
 
-@custom-media --breakpoint-sm (min-width: 60em);
-@custom-media --breakpoint-md (min-width: 80em);
-@custom-media --breakpoint-lg (min-width: 120em);
+@custom-media --breakpoint-sm (min-width: 40em);
+@custom-media --breakpoint-md (min-width: 64em);
+@custom-media --breakpoint-lg (min-width: 80em);
 
 
 /* Custom properties */
