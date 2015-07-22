@@ -21,19 +21,19 @@ class FlexItemSetting extends React.Component {
     const items = arrayRange(1, this.props.items);
     return (
       <div>
+        <div className="h3 pb2">選擇骰子 Dice</div>
         <div>
-          <span className="h3 px1">選擇骰子 Dice：</span>
-          <button className="h1 btn btn-primary bg-olive pb2" value="1" disabled={this.props.items === 1}
+          <button className="h1 btn btn-primary bg-olive" value="1" disabled={this.props.items === 1}
             onClick={this.handleItems.bind(this)}>&#9856;</button> &nbsp;
-          <button className="h1 btn btn-primary bg-olive pb2" value="2" disabled={this.props.items === 2}
+          <button className="h1 btn btn-primary bg-olive" value="2" disabled={this.props.items === 2}
             onClick={this.handleItems.bind(this)}>&#9857;</button> &nbsp;
-          <button className="h1 btn btn-primary bg-olive pb2" value="3" disabled={this.props.items === 3}
+          <button className="h1 btn btn-primary bg-olive" value="3" disabled={this.props.items === 3}
             onClick={this.handleItems.bind(this)}>&#9858;</button> &nbsp;
-          <button className="h1 btn btn-primary bg-olive pb2" value="4" disabled={this.props.items === 4}
+          <button className="h1 btn btn-primary bg-olive" value="4" disabled={this.props.items === 4}
             onClick={this.handleItems.bind(this)}>&#9859;</button> &nbsp;
-          <button className="h1 btn btn-primary bg-olive pb2" value="5" disabled={this.props.items === 5}
+          <button className="h1 btn btn-primary bg-olive" value="5" disabled={this.props.items === 5}
             onClick={this.handleItems.bind(this)}>&#9860;</button> &nbsp;
-          <button className="h1 btn btn-primary bg-olive pb2" value="6" disabled={this.props.items === 6}
+          <button className="h1 btn btn-primary bg-olive" value="6" disabled={this.props.items === 6}
             onClick={this.handleItems.bind(this)}>&#9861;</button>
         </div>
         <div style={divHeight}>
@@ -45,22 +45,22 @@ class FlexItemSetting extends React.Component {
                 <div className="border-top" key={id}>
                   <div className="col col-2 olive">{diceNumber[id - 1]} {cssValue}</div>
                   <div className="col col-10">
-                    <button className="h5 btn btn-outline maroon p1 m1" name={id} value="flex-sauto"
+                    <button className="h6 btn btn-outline maroon pmini mmini" name={id} value="flex-sauto"
                       disabled={cssValue === 'auto'}
                       onClick={this.handleStyle.bind(this)}>auto</button>
-                    <button className="h5 btn btn-outline maroon p1 m1" name={id} value="flex-sstart"
+                    <button className="h6 btn btn-outline maroon pmini mmini" name={id} value="flex-sstart"
                       disabled={cssValue === 'flex-start'}
                       onClick={this.handleStyle.bind(this)}>flex-start</button>
-                    <button className="h5 btn btn-outline maroon p1 m1" name={id} value="flex-send"
+                    <button className="h6 btn btn-outline maroon pmini mmini" name={id} value="flex-send"
                       disabled={cssValue === 'flex-end'}
                       onClick={this.handleStyle.bind(this)}>flex-end</button>
-                    <button className="h5 btn btn-outline maroon p1 m1" name={id} value="flex-scenter"
+                    <button className="h6 btn btn-outline maroon pmini mmini" name={id} value="flex-scenter"
                       disabled={cssValue === 'center'}
                       onClick={this.handleStyle.bind(this)}>center</button>
-                    <button className="h5 btn btn-outline maroon p1 m1" name={id} value="flex-sbaseline"
+                    <button className="h6 btn btn-outline maroon pmini mmini" name={id} value="flex-sbaseline"
                       disabled={cssValue === 'baseline'}
                       onClick={this.handleStyle.bind(this)}>baseline</button>
-                    <button className="h5 btn btn-outline maroon p1 m1" name={id} value="flex-sstretch"
+                    <button className="h6 btn btn-outline maroon pmini mmini" name={id} value="flex-sstretch"
                       disabled={cssValue === 'stretch'}
                       onClick={this.handleStyle.bind(this)}>stretch</button>
                   </div>

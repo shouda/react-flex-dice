@@ -152,14 +152,22 @@
 */
 
 :root {
+  --space-mini: .25rem;
   --container-width: 100%;
 }
 
 
 /* Custom White Space */
 
-.pb2  { padding-bottom: var(--space-2) }
-
+.pmini  {
+  padding: var(--space-mini)
+}
+.pb2  {
+  padding-bottom: var(--space-2)
+}
+.mmini  {
+  margin: var(--space-mini)
+}
 
 /* Custom Flex Box */
 
