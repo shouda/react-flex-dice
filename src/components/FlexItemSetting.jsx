@@ -34,12 +34,12 @@ class FlexItemSetting extends React.Component {
             onClick={this.handleItems.bind(this)}>&#9861;</button>
         </div>
         <div style={divHeight}>
-          <div className="m1 border-bottom">align-self: <span className="h6">(個別元件的對齊方式)</span></div>
-          <div className="container p1">
+          <div className="m1">align-self: <span className="h6">(個別元件的對齊方式)</span></div>
+          <div className="m1 flex flex-column">
             {items.map((id) => {
               const cssValue = this.props.cssValue[this.props.alignSelf[id - 1]];
               return (
-                <div className="clearfix border-bottom" key={id}>
+                <div className="border-top" key={id}>
                   <div className="col col-2 olive">{diceNumber[id - 1]} {cssValue}</div>
                   <div className="col col-10">
                     <button className="h5 btn btn-outline maroon p1 m1" name={id} value="flex-sauto"

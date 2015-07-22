@@ -62,17 +62,17 @@ class Flex extends React.Component {
       <div className="border">
         <div className="h3 p2 bg-gray">CSS Flexbox Demo by React.js</div>
         <FlexSetting cssValue={this.state.cssValue} onStyleChange={this.handleStyle.bind(this)} />
-        <div className="container">
-          <div className="clearfix">
-            <div className="col col-2 p1">
-              <FlexItem classnames={flexbox} items={this.state.items} alignSelf={this.state.alignSelf} />
-            </div>
-            <div className="col col-10 align-top">
-              <FlexItemSetting cssValue={origCssValue.alignSelf}
-                items={this.state.items} onItemsChange={this.handleItems.bind(this)}
-                alignSelf={this.state.alignSelf} onSelfChange={this.handleSelf.bind(this)} />
-            </div>
+        <div className="flex flex-wrap">
+          <div className="col col-3">
+            <FlexItem classnames={flexbox} items={this.state.items} alignSelf={this.state.alignSelf} />
           </div>
+          <div className="col col-9">
+            <FlexItemSetting cssValue={origCssValue.alignSelf}
+              items={this.state.items} onItemsChange={this.handleItems.bind(this)}
+              alignSelf={this.state.alignSelf} onSelfChange={this.handleSelf.bind(this)} />
+          </div>
+        </div>
+        <div className="col col-12 h6 center p1">source code: <a href="https://github.com/shouda/react-flex-dice">https://github.com/shouda/react-flex-dice</a>
         </div>
       </div>
     );

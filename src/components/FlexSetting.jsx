@@ -3,14 +3,14 @@ import React from 'react';
 class FlexSetting extends React.Component {
   render() {
     return (
-      <div className="container p1">
-        <div className="clearfix border-bottom">
+      <div className="m1 flex flex-column">
+        <div className="border-bottom">
         <div className="col col-3">
             flex-direction: <span className="h6">(排列方向)</span>
           <br /><span className="olive">{this.props.cssValue.direction}</span>
           </div>
           <div className="col col-9">
-          <button className="h5 btn btn-outline maroon p1 m1" name="direction" value="flex-row"
+            <button className="h5 btn btn-outline maroon p1 m1" name="direction" value="flex-row"
               disabled={this.props.cssValue.direction === 'row'}
               onClick={this.handleStyle.bind(this)}>row</button>
             <button className="h5 btn btn-outline maroon p1 m1" name="direction" value="flex-column"
@@ -24,7 +24,7 @@ class FlexSetting extends React.Component {
                 onClick={this.handleStyle.bind(this)}>column-reverse</button>
           </div>
         </div>
-        <div className="clearfix border-bottom">
+        <div className="border-bottom">
           <div className="col col-3">
             flex-wrap: <span className="h6">(換行)</span>
           <br /><span className="olive">{this.props.cssValue.wrap}</span>
@@ -41,7 +41,7 @@ class FlexSetting extends React.Component {
               onClick={this.handleStyle.bind(this)}>wrap-reverse</button>
           </div>
         </div>
-        <div className="clearfix border-bottom">
+        <div className="border-bottom">
           <div className="col col-3">
             justify-content: <span className="h6">(左右對齊)</span>
           <br /><span className="olive">{this.props.cssValue.justify}</span>
@@ -64,7 +64,7 @@ class FlexSetting extends React.Component {
               onClick={this.handleStyle.bind(this)}>space-around</button>
           </div>
         </div>
-        <div className="clearfix border-bottom">
+        <div className="border-bottom">
           <div className="col col-3">
             align-items: <span className="h6">(垂直對齊)</span>
           <br /><span className="olive">{this.props.cssValue.alignItems}</span>
@@ -87,7 +87,7 @@ class FlexSetting extends React.Component {
               onClick={this.handleStyle.bind(this)}>baseline</button>
           </div>
         </div>
-        <div className="clearfix">
+        <div>
           <div className="col col-3">
             align-content: <span className="h6">(多行對齊)</span>
           <br /><span className="olive">{this.props.cssValue.alignContent}</span>
