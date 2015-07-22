@@ -17,10 +17,10 @@ class FlexItemSetting extends React.Component {
   render() {
     const items = arrayRange(1, this.props.items);
     return (
-      <div className="p1">
-        <div className="p1">
+      <div>
+        <div>
           <span className="h3 px1">選擇骰子 Dice：</span>
-        <button className="h1 btn btn-primary bg-olive pb2" value="1" disabled={this.props.items === 1}
+          <button className="h1 btn btn-primary bg-olive pb2" value="1" disabled={this.props.items === 1}
             onClick={this.handleItems.bind(this)}>&#9856;</button> &nbsp;
           <button className="h1 btn btn-primary bg-olive pb2" value="2" disabled={this.props.items === 2}
             onClick={this.handleItems.bind(this)}>&#9857;</button> &nbsp;
@@ -33,7 +33,7 @@ class FlexItemSetting extends React.Component {
           <button className="h1 btn btn-primary bg-olive pb2" value="6" disabled={this.props.items === 6}
             onClick={this.handleItems.bind(this)}>&#9861;</button>
         </div>
-        <div className="p1" style={divHeight}>
+        <div style={divHeight}>
           <div className="m1 border-bottom">align-self: <span className="h6">(個別元件的對齊方式)</span></div>
           <div className="container p1">
             {items.map((id) => {
